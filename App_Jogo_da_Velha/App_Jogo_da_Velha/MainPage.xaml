@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Jogo_da_Velha.MainPage"
+             Title="Jogo da Velha"
+             BackgroundColor="#4F4F4F">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+
+        <Label x:Name="titulo" Text="JOGO DA VELHA" 
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               FontSize="45"
+               TextColor="Red"/>
+
+        <Grid Padding="5">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="50"/>
+
+            </Grid.RowDefinitions>
+
+            <Label x:Name="pergunta" Text="Quem Começa?" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="25"/>
+
+            <RadioButton x:Name="rdbtn_X" Grid.Column="0" Grid.Row="1"
+                         Content="X" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"
+                         IsChecked="False"/>
+
+            <RadioButton x:Name="rdbtn_O" Grid.Column="1" Grid.Row="1"
+                         Content="O" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"
+                         IsChecked="False"/>
+
+        </Grid>
+
+        <Grid Padding="5">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="150"/>
+
+            </Grid.RowDefinitions>
+
+            <!-- Botões da Primeira Linha -->
+
+            <Button x:Name="btn_1" Text="" Grid.Column="0" Grid.Row="0" Clicked="btn_1_Clicked" 
+                    BackgroundColor="Green" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+            <Button x:Name="btn_2" Text="" Grid.Column="1" Grid.Row="0" Clicked="btn_2_Clicked" 
+                    BackgroundColor="Yellow" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+            <Button x:Name="btn_3" Text="" Grid.Column="2" Grid.Row="0" Clicked="btn_3_Clicked" 
+                    BackgroundColor="Green" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+            <!-- Botões da Segunda Linha -->
+
+            <Button x:Name="btn_4" Text="" Grid.Column="0" Grid.Row="1" Clicked="btn_4_Clicked" 
+                    BackgroundColor="Yellow" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+            <Button x:Name="btn_5" Text="" Grid.Column="1" Grid.Row="1" Clicked="btn_5_Clicked" 
+                    BackgroundColor="Blue" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+            <Button x:Name="btn_6" Text="" Grid.Column="2" Grid.Row="1" Clicked="btn_6_Clicked" 
+                    BackgroundColor="Yellow" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+            <!-- Botões da Terceira Linha -->
+
+            <Button x:Name="btn_7" Text="" Grid.Column="0" Grid.Row="2" Clicked="btn_7_Clicked" 
+                    BackgroundColor="Green" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+            <Button x:Name="btn_8" Text="" Grid.Column="1" Grid.Row="2" Clicked="btn_8_Clicked" 
+                    BackgroundColor="Yellow" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+            <Button x:Name="btn_9" Text="" Grid.Column="2" Grid.Row="2" Clicked="btn_9_Clicked" 
+                    BackgroundColor="Green" Margin="5" Style="{ StaticResource texto_grande }"/>
+
+        </Grid>
+
+        <!-- Botão Resetar -->
+
+        <Button x:Name="btn_reset" Text="Resetar" HeightRequest="50" Clicked="btn_reset_Clicked"
+                BorderRadius="6" BackgroundColor="Black" TextColor="White" FontSize="20"/>
+
+    </StackLayout>
+
+</ContentPage>
