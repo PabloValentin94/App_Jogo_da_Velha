@@ -25,7 +25,7 @@ namespace App_Jogo_da_Velha
         private async void btn_1_Clicked(object sender, EventArgs e)
         {
             
-            if (btn_1.Text != "")
+            if(btn_1.Text != "")
             {
 
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
@@ -35,7 +35,7 @@ namespace App_Jogo_da_Velha
             if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -48,7 +48,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -61,7 +61,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -93,22 +93,24 @@ namespace App_Jogo_da_Velha
 
             }
 
+            verificar();
+
         }
 
         private async void btn_2_Clicked(object sender, EventArgs e)
         {
 
-            if (btn_2.Text != "")
+            if(btn_2.Text != "")
             {
 
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
 
             }
 
-            if (primeira_jogada == 0)
+            if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -121,7 +123,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -134,7 +136,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -146,7 +148,7 @@ namespace App_Jogo_da_Velha
             else
             {
 
-                if (jogador_atual == "X")
+                if(jogador_atual == "X")
                 {
 
                     jogador_atual = "O";
@@ -165,23 +167,25 @@ namespace App_Jogo_da_Velha
                 }
 
             }
+
+            verificar();
 
         }
 
         private async void btn_3_Clicked(object sender, EventArgs e)
         {
 
-            if (btn_3.Text != "")
+            if(btn_3.Text != "")
             {
 
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
 
             }
 
-            if (primeira_jogada == 0)
+            if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -194,7 +198,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -207,7 +211,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -219,7 +223,7 @@ namespace App_Jogo_da_Velha
             else
             {
 
-                if (jogador_atual == "X")
+                if(jogador_atual == "X")
                 {
 
                     jogador_atual = "O";
@@ -238,23 +242,25 @@ namespace App_Jogo_da_Velha
                 }
 
             }
+
+            verificar();
 
         }
 
         private async void btn_4_Clicked(object sender, EventArgs e)
         {
 
-            if (btn_4.Text != "")
+            if(btn_4.Text != "")
             {
 
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
 
             }
 
-            if (primeira_jogada == 0)
+            if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -267,7 +273,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -280,7 +286,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -292,7 +298,7 @@ namespace App_Jogo_da_Velha
             else
             {
 
-                if (jogador_atual == "X")
+                if(jogador_atual == "X")
                 {
 
                     jogador_atual = "O";
@@ -311,23 +317,25 @@ namespace App_Jogo_da_Velha
                 }
 
             }
+
+            verificar();
 
         }
 
         private async void btn_5_Clicked(object sender, EventArgs e)
         {
 
-            if (btn_5.Text != "")
+            if(btn_5.Text != "")
             {
 
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
 
             }
 
-            if (primeira_jogada == 0)
+            if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -340,7 +348,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -353,7 +361,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -365,7 +373,7 @@ namespace App_Jogo_da_Velha
             else
             {
 
-                if (jogador_atual == "X")
+                if(jogador_atual == "X")
                 {
 
                     jogador_atual = "O";
@@ -384,21 +392,23 @@ namespace App_Jogo_da_Velha
                 }
 
             }
+
+            verificar();
 
         }
 
         private async void btn_6_Clicked(object sender, EventArgs e)
         {
 
-            if (btn_6.Text != "")
+            if(btn_6.Text != "")
             {
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
             }
 
-            if (primeira_jogada == 0)
+            if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -411,7 +421,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -424,7 +434,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -436,7 +446,7 @@ namespace App_Jogo_da_Velha
             else
             {
 
-                if (jogador_atual == "X")
+                if(jogador_atual == "X")
                 {
 
                     jogador_atual = "O";
@@ -455,23 +465,25 @@ namespace App_Jogo_da_Velha
                 }
 
             }
+
+            verificar();
 
         }
 
         private async void btn_7_Clicked(object sender, EventArgs e)
         {
 
-            if (btn_7.Text != "")
+            if(btn_7.Text != "")
             {
 
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
 
             }
 
-            if (primeira_jogada == 0)
+            if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -484,7 +496,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -497,7 +509,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -509,7 +521,7 @@ namespace App_Jogo_da_Velha
             else
             {
 
-                if (jogador_atual == "X")
+                if(jogador_atual == "X")
                 {
 
                     jogador_atual = "O";
@@ -528,23 +540,25 @@ namespace App_Jogo_da_Velha
                 }
 
             }
+
+            verificar();
 
         }
 
         private async void btn_8_Clicked(object sender, EventArgs e)
         {
 
-            if (btn_8.Text != "")
+            if(btn_8.Text != "")
             {
 
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
 
             }
 
-            if (primeira_jogada == 0)
+            if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -557,7 +571,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -570,7 +584,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -582,7 +596,7 @@ namespace App_Jogo_da_Velha
             else
             {
 
-                if (jogador_atual == "X")
+                if(jogador_atual == "X")
                 {
 
                     jogador_atual = "O";
@@ -601,23 +615,25 @@ namespace App_Jogo_da_Velha
                 }
 
             }
+
+            verificar();
 
         }
 
         private async void btn_9_Clicked(object sender, EventArgs e)
         {
 
-            if (btn_9.Text != "")
+            if(btn_9.Text != "")
             {
 
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
 
             }
 
-            if (primeira_jogada == 0)
+            if(primeira_jogada == 0)
             {
 
-                if (rdbtn_X.IsChecked == true)
+                if(rdbtn_X.IsChecked == true)
                 {
 
                     jogador_atual = "X";
@@ -630,7 +646,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_O.IsChecked == true)
+                else if(rdbtn_O.IsChecked == true)
                 {
 
                     jogador_atual = "O";
@@ -643,7 +659,7 @@ namespace App_Jogo_da_Velha
 
                 }
 
-                else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                 {
 
                     await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
@@ -655,7 +671,7 @@ namespace App_Jogo_da_Velha
             else
             {
 
-                if (jogador_atual == "X")
+                if(jogador_atual == "X")
                 {
 
                     jogador_atual = "O";
@@ -674,6 +690,8 @@ namespace App_Jogo_da_Velha
                 }
 
             }
+
+            verificar();
 
         }
 
@@ -703,5 +721,140 @@ namespace App_Jogo_da_Velha
             primeira_jogada = 0;
 
         }
+
+        async void verificar()
+        {
+
+            /* Esse método servirá para verificar se alguém venceu, portanto o jogo acaba, ou se o jogo continuará. */
+
+            // Linhas:
+
+            if(btn_1.Text == "X" && btn_2.Text == "X" && btn_3.Text == "X")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
+
+            }
+
+            else if (btn_1.Text == "O" && btn_2.Text == "O" && btn_3.Text == "O")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+            }
+
+            else if (btn_4.Text == "X" && btn_5.Text == "X" && btn_6.Text == "X")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
+
+            }
+
+            else if (btn_4.Text == "O" && btn_5.Text == "O" && btn_6.Text == "O")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+            }
+
+            else if (btn_7.Text == "X" && btn_8.Text == "X" && btn_9.Text == "X")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
+
+            }
+
+            else if (btn_7.Text == "O" && btn_8.Text == "O" && btn_9.Text == "O")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+            }
+
+            // Colunas:
+
+            else if (btn_1.Text == "X" && btn_4.Text == "X" && btn_7.Text == "X")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
+
+            }
+
+            else if (btn_1.Text == "O" && btn_4.Text == "O" && btn_7.Text == "O")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+            }
+
+            else if (btn_2.Text == "X" && btn_5.Text == "X" && btn_8.Text == "X")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
+
+            }
+
+            else if (btn_2.Text == "O" && btn_5.Text == "O" && btn_8.Text == "O")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+            }
+
+            else if (btn_3.Text == "X" && btn_6.Text == "X" && btn_9.Text == "X")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
+
+            }
+
+            else if (btn_3.Text == "O" && btn_6.Text == "O" && btn_9.Text == "O")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+            }
+
+            // Diagonais:
+
+            else if (btn_1.Text == "X" && btn_5.Text == "X" && btn_9.Text == "X")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
+
+            }
+
+            else if (btn_1.Text == "O" && btn_5.Text == "O" && btn_9.Text == "O")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+            }
+
+            else if (btn_3.Text == "X" && btn_5.Text == "X" && btn_7.Text == "X")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
+
+            }
+
+            else if (btn_3.Text == "O" && btn_5.Text == "O" && btn_7.Text == "O")
+            {
+
+                await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+            }
+
+            // Velha:
+
+            /*else
+            {
+
+                await DisplayAlert("Atenção", "🤝 Deu Velha!", "OK");
+
+            }*/
+
+        }
+
     }
 }

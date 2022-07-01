@@ -101,7 +101,7 @@
 
         <!-- Botão Resetar -->
 
-        <Button x:Name="btn_reset" Text="Resetar" HeightRequest="50" Clicked="btn_reset_Clicked"
+        <Button x:Name="btn_reset" Text="Reiniciar" HeightRequest="50" Clicked="btn_reset_Clicked"
                 BorderRadius="6" BackgroundColor="Black" TextColor="White" FontSize="20"/>
 
     </StackLayout>
