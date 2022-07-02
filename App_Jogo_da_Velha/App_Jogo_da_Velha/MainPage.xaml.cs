@@ -15,10 +15,14 @@ namespace App_Jogo_da_Velha
 
         int primeira_jogada = 0;
 
+        int contador = 0;
+
         public MainPage()
         {
 
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
 
         }
 
@@ -32,68 +36,81 @@ namespace App_Jogo_da_Velha
 
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_1.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_1.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_1.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_1.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_1.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_1.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_1.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_1.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -107,68 +124,81 @@ namespace App_Jogo_da_Velha
 
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_2.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_2.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_2.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_2.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_2.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_2.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_2.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_2.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -182,68 +212,81 @@ namespace App_Jogo_da_Velha
 
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_3.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_3.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_3.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_3.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_3.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_3.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_3.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_3.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -257,68 +300,81 @@ namespace App_Jogo_da_Velha
 
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_4.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_4.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_4.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_4.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_4.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_4.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_4.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_4.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -332,68 +388,81 @@ namespace App_Jogo_da_Velha
 
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_5.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_5.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_5.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_5.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_5.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_5.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_5.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_5.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -405,68 +474,81 @@ namespace App_Jogo_da_Velha
                 await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_6.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_6.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_6.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_6.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_6.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_6.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_6.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_6.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -480,68 +562,81 @@ namespace App_Jogo_da_Velha
 
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_7.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_7.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_7.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_7.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_7.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_7.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_7.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_7.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -555,68 +650,81 @@ namespace App_Jogo_da_Velha
 
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_8.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_8.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_8.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_8.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_8.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_8.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_8.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_8.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -630,68 +738,81 @@ namespace App_Jogo_da_Velha
 
             }
 
-            if(primeira_jogada == 0)
-            {
-
-                if(rdbtn_X.IsChecked == true)
-                {
-
-                    jogador_atual = "X";
-
-                    btn_9.Text = jogador_atual.ToString();
-
-                    rdbtn_O.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_O.IsChecked == true)
-                {
-
-                    jogador_atual = "O";
-
-                    btn_9.Text = jogador_atual.ToString();
-
-                    rdbtn_X.IsEnabled = false;
-
-                    primeira_jogada++;
-
-                }
-
-                else if(rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                {
-
-                    await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
-
-                }
-
-            }
-
             else
             {
 
-                if(jogador_atual == "X")
+                if (primeira_jogada == 0)
                 {
 
-                    jogador_atual = "O";
+                    if (rdbtn_X.IsChecked == true)
+                    {
 
-                    btn_9.Text = jogador_atual.ToString();
+                        jogador_atual = "X";
+
+                        btn_9.Text = jogador_atual.ToString();
+
+                        rdbtn_O.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_O.IsChecked == true)
+                    {
+
+                        jogador_atual = "O";
+
+                        btn_9.Text = jogador_atual.ToString();
+
+                        rdbtn_X.IsEnabled = false;
+
+                        primeira_jogada++;
+
+                        contador++;
+
+                    }
+
+                    else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                    {
+
+                        await DisplayAlert("Aviso", "Escolha uma das opções antes de jogar", "OK");
+
+                    }
 
                 }
 
                 else
                 {
 
-                    jogador_atual = "X";
+                    if (jogador_atual == "X")
+                    {
 
-                    btn_9.Text = jogador_atual.ToString();
+                        jogador_atual = "O";
+
+                        btn_9.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
+
+                    else
+                    {
+
+                        jogador_atual = "X";
+
+                        btn_9.Text = jogador_atual.ToString();
+
+                        contador++;
+
+                    }
 
                 }
 
-            }
+                verificar();
 
-            verificar();
+            }
 
         }
 
@@ -720,6 +841,8 @@ namespace App_Jogo_da_Velha
 
             primeira_jogada = 0;
 
+            contador = 0;
+
         }
 
         async void verificar()
@@ -734,12 +857,16 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
 
+                contador = 0;
+
             }
 
             else if (btn_1.Text == "O" && btn_2.Text == "O" && btn_3.Text == "O")
             {
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+                contador = 0;
 
             }
 
@@ -748,12 +875,16 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
 
+                contador = 0;
+
             }
 
             else if (btn_4.Text == "O" && btn_5.Text == "O" && btn_6.Text == "O")
             {
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+                contador = 0;
 
             }
 
@@ -762,12 +893,16 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
 
+                contador = 0;
+
             }
 
             else if (btn_7.Text == "O" && btn_8.Text == "O" && btn_9.Text == "O")
             {
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+                contador = 0;
 
             }
 
@@ -778,12 +913,16 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
 
+                contador = 0;
+
             }
 
             else if (btn_1.Text == "O" && btn_4.Text == "O" && btn_7.Text == "O")
             {
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+                contador = 0;
 
             }
 
@@ -792,12 +931,16 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
 
+                contador = 0;
+
             }
 
             else if (btn_2.Text == "O" && btn_5.Text == "O" && btn_8.Text == "O")
             {
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+                contador = 0;
 
             }
 
@@ -806,12 +949,16 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
 
+                contador = 0;
+
             }
 
             else if (btn_3.Text == "O" && btn_6.Text == "O" && btn_9.Text == "O")
             {
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+                contador = 0;
 
             }
 
@@ -822,12 +969,16 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
 
+                contador = 0;
+
             }
 
             else if (btn_1.Text == "O" && btn_5.Text == "O" && btn_9.Text == "O")
             {
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
+
+                contador = 0;
 
             }
 
@@ -836,6 +987,8 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: X", "OK");
 
+                contador = 0;
+
             }
 
             else if (btn_3.Text == "O" && btn_5.Text == "O" && btn_7.Text == "O")
@@ -843,16 +996,20 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Aviso", "🏆 Vencedor: O", "OK");
 
+                contador = 0;
+
             }
 
             // Velha:
 
-            /*else
+            else if(btn_1.Text != "" && btn_2.Text != "" && btn_3.Text != "" && btn_4.Text != "" 
+                    && btn_5.Text != "" && btn_6.Text != "" && btn_7.Text != "" && btn_8.Text != "" && btn_9.Text != "" 
+                    && contador == 9)
             {
 
                 await DisplayAlert("Atenção", "🤝 Deu Velha!", "OK");
 
-            }*/
+            }
 
         }
 

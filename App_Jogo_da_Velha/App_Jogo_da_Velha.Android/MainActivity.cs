@@ -17,11 +17,12 @@ namespace App_Jogo_da_Velha.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
             LoadApplication(new App());
 
-            /*Window.ClearFlags(Android.Views.WindowManagerFlags.TranslucentStatus);
+            Window.ClearFlags(Android.Views.WindowManagerFlags.TranslucentStatus);
             Window.AddFlags(Android.Views.WindowManagerFlags.DrawsSystemBarBackgrounds);
-            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("4F4F4F"));*/
+            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#4F4F4F"));
 
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

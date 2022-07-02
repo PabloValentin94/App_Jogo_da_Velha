@@ -7,6 +7,28 @@
 
         <ResourceDictionary>
 
+            <Style x:Key="fonte_customizada" TargetType="Label">
+
+                <Setter Property="FontFamily">
+
+                    <Setter.Value>
+
+                        <OnPlatform x:TypeArguments="x:String" 
+                                    iOS="Astrud.ttf"
+                                    Android="Astrud.ttf#Astrud"/>
+
+                    </Setter.Value>
+
+                </Setter>
+
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="90"/>
+                <Setter Property="TextColor" Value="Red"/>
+
+
+            </Style>
+
             <Style x:Key="borda_redonda" TargetType="Button">
 
                 <Setter Property="BorderRadius" Value="10"/>

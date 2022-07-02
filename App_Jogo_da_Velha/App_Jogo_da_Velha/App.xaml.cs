@@ -10,7 +10,7 @@ namespace App_Jogo_da_Velha
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
