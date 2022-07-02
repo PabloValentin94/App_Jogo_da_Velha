@@ -23,7 +23,7 @@
 
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="FontSize" Value="90"/>
+                <Setter Property="FontSize" Value="85"/>
                 <Setter Property="TextColor" Value="Red"/>
 
 
