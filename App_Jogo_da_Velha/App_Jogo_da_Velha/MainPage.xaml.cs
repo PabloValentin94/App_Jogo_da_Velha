@@ -46,7 +46,7 @@ namespace App_Jogo_da_Velha
                     if (btn_1.Text != "")
                     {
 
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
 
                     }
 
@@ -93,7 +93,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -135,7 +135,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -162,7 +162,7 @@ namespace App_Jogo_da_Velha
                     if (btn_2.Text != "")
                     {
 
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
 
                     }
 
@@ -209,7 +209,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -251,7 +251,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -278,7 +278,7 @@ namespace App_Jogo_da_Velha
                     if (btn_3.Text != "")
                     {
 
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
 
                     }
 
@@ -325,7 +325,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -367,7 +367,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -394,7 +394,7 @@ namespace App_Jogo_da_Velha
                     if (btn_4.Text != "")
                     {
 
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
 
                     }
 
@@ -441,7 +441,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -483,7 +483,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -510,7 +510,7 @@ namespace App_Jogo_da_Velha
                     if (btn_5.Text != "")
                     {
 
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
 
                     }
 
@@ -557,7 +557,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -599,7 +599,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -625,7 +625,7 @@ namespace App_Jogo_da_Velha
 
                     if (btn_6.Text != "")
                     {
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
                     }
 
                     else
@@ -671,7 +671,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -713,7 +713,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -740,7 +740,7 @@ namespace App_Jogo_da_Velha
                     if (btn_7.Text != "")
                     {
 
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
 
                     }
 
@@ -787,7 +787,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -829,7 +829,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -856,7 +856,7 @@ namespace App_Jogo_da_Velha
                     if (btn_8.Text != "")
                     {
 
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
 
                     }
 
@@ -903,7 +903,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -945,7 +945,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -972,7 +972,7 @@ namespace App_Jogo_da_Velha
                     if (btn_9.Text != "")
                     {
 
-                        await DisplayAlert("Aviso", "Este campo já foi usado", "OK");
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
 
                     }
 
@@ -1019,7 +1019,7 @@ namespace App_Jogo_da_Velha
                             else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
                             {
 
-                                await DisplayAlert("Atenção", "Escolha uma das opções antes de jogar", "OK");
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
 
                             }
 
@@ -1061,7 +1061,7 @@ namespace App_Jogo_da_Velha
                 else
                 {
 
-                    await DisplayAlert("Atenção", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
 
                 }
 
@@ -1134,7 +1134,7 @@ namespace App_Jogo_da_Velha
                 if (btn_1.Text == "X" && btn_2.Text == "X" && btn_3.Text == "X")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: X", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
 
                     contador = 0;
 
@@ -1145,7 +1145,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "O" && btn_2.Text == "O" && btn_3.Text == "O")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: O", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
 
                     contador = 0;
 
@@ -1156,7 +1156,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_4.Text == "X" && btn_5.Text == "X" && btn_6.Text == "X")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: X", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
 
                     contador = 0;
 
@@ -1167,7 +1167,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_4.Text == "O" && btn_5.Text == "O" && btn_6.Text == "O")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: O", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
 
                     contador = 0;
 
@@ -1178,7 +1178,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_7.Text == "X" && btn_8.Text == "X" && btn_9.Text == "X")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: X", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
 
                     contador = 0;
 
@@ -1189,7 +1189,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_7.Text == "O" && btn_8.Text == "O" && btn_9.Text == "O")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: O", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
 
                     contador = 0;
 
@@ -1202,7 +1202,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "X" && btn_4.Text == "X" && btn_7.Text == "X")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: X", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
 
                     contador = 0;
 
@@ -1213,7 +1213,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "O" && btn_4.Text == "O" && btn_7.Text == "O")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: O", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
 
                     contador = 0;
 
@@ -1224,7 +1224,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_2.Text == "X" && btn_5.Text == "X" && btn_8.Text == "X")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: X", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
 
                     contador = 0;
 
@@ -1235,7 +1235,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_2.Text == "O" && btn_5.Text == "O" && btn_8.Text == "O")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: O", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
 
                     contador = 0;
 
@@ -1246,7 +1246,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_3.Text == "X" && btn_6.Text == "X" && btn_9.Text == "X")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: X", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
 
                     contador = 0;
 
@@ -1257,7 +1257,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_3.Text == "O" && btn_6.Text == "O" && btn_9.Text == "O")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: O", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
 
                     contador = 0;
 
@@ -1270,7 +1270,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "X" && btn_5.Text == "X" && btn_9.Text == "X")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: X", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
 
                     contador = 0;
 
@@ -1281,7 +1281,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "O" && btn_5.Text == "O" && btn_9.Text == "O")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: O", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
 
                     contador = 0;
 
@@ -1292,7 +1292,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_3.Text == "X" && btn_5.Text == "X" && btn_7.Text == "X")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: X", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
 
                     contador = 0;
 
@@ -1303,7 +1303,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_3.Text == "O" && btn_5.Text == "O" && btn_7.Text == "O")
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🏆 Vencedor: O", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
 
                     contador = 0;
 
@@ -1318,7 +1318,7 @@ namespace App_Jogo_da_Velha
                         && contador == 9)
                 {
 
-                    await DisplayAlert("Fim de Jogo", "🤝🏼 Deu Velha!", "OK");
+                    await DisplayAlert("Fim de Jogo!", "🤝🏼 Deu Velha!", "OK");
 
                     vencedor = "Empate";
 
