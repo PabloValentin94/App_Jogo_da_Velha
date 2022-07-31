@@ -66,35 +66,35 @@
 
                     <!-- Botões da Primeira Linha -->
 
-                    <Button x:Name="btn_1" Text="" Grid.Column="0" Grid.Row="0" Clicked="btn_1_Clicked" 
+                    <Button x:Name="btn_1" Text="" Grid.Column="0" Grid.Row="0" Clicked="btn_Clicked" 
                         BackgroundColor="#008000" Margin="5" Style="{ StaticResource campos }"/>
 
-                    <Button x:Name="btn_2" Text="" Grid.Column="1" Grid.Row="0" Clicked="btn_2_Clicked" 
+                    <Button x:Name="btn_2" Text="" Grid.Column="1" Grid.Row="0" Clicked="btn_Clicked" 
                         BackgroundColor="#FFFF00" Margin="5" Style="{ StaticResource campos }"/>
 
-                    <Button x:Name="btn_3" Text="" Grid.Column="2" Grid.Row="0" Clicked="btn_3_Clicked" 
+                    <Button x:Name="btn_3" Text="" Grid.Column="2" Grid.Row="0" Clicked="btn_Clicked" 
                         BackgroundColor="#008000" Margin="5" Style="{ StaticResource campos }"/>
 
                     <!-- Botões da Segunda Linha -->
 
-                    <Button x:Name="btn_4" Text="" Grid.Column="0" Grid.Row="1" Clicked="btn_4_Clicked" 
+                    <Button x:Name="btn_4" Text="" Grid.Column="0" Grid.Row="1" Clicked="btn_Clicked" 
                         BackgroundColor="#FFFF00" Margin="5" Style="{ StaticResource campos }"/>
 
-                    <Button x:Name="btn_5" Text="" Grid.Column="1" Grid.Row="1" Clicked="btn_5_Clicked" 
+                    <Button x:Name="btn_5" Text="" Grid.Column="1" Grid.Row="1" Clicked="btn_Clicked" 
                         BackgroundColor="#0000FF" Margin="5" Style="{ StaticResource campos }"/>
 
-                    <Button x:Name="btn_6" Text="" Grid.Column="2" Grid.Row="1" Clicked="btn_6_Clicked" 
+                    <Button x:Name="btn_6" Text="" Grid.Column="2" Grid.Row="1" Clicked="btn_Clicked" 
                         BackgroundColor="#FFFF00" Margin="5" Style="{ StaticResource campos }"/>
 
                     <!-- Botões da Terceira Linha -->
 
-                    <Button x:Name="btn_7" Text="" Grid.Column="0" Grid.Row="2" Clicked="btn_7_Clicked" 
+                    <Button x:Name="btn_7" Text="" Grid.Column="0" Grid.Row="2" Clicked="btn_Clicked" 
                         BackgroundColor="#008000" Margin="5" Style="{ StaticResource campos }"/>
 
-                    <Button x:Name="btn_8" Text="" Grid.Column="1" Grid.Row="2" Clicked="btn_8_Clicked" 
+                    <Button x:Name="btn_8" Text="" Grid.Column="1" Grid.Row="2" Clicked="btn_Clicked" 
                         BackgroundColor="#FFFF00" Margin="5" Style="{ StaticResource campos }"/>
 
-                    <Button x:Name="btn_9" Text="" Grid.Column="2" Grid.Row="2" Clicked="btn_9_Clicked" 
+                    <Button x:Name="btn_9" Text="" Grid.Column="2" Grid.Row="2" Clicked="btn_Clicked" 
                         BackgroundColor="#008000" Margin="5" Style="{ StaticResource campos }"/>
 
                 </Grid>

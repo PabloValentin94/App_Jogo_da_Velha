@@ -15,11 +15,11 @@ namespace App_Jogo_da_Velha
 
         string jogador_atual = "";
 
-        int primeira_jogada = 0;
+        bool primeira_jogada = true;
 
         int contador = 0;
 
-        string vencedor = "";
+        bool vencedor = false;
 
         public MainPage()
         {
@@ -34,10 +34,124 @@ namespace App_Jogo_da_Velha
 
         }
 
-        private async void btn_1_Clicked(object sender, EventArgs e)
+        private async void btn_Clicked(object sender, EventArgs e)
         {
 
             try
+            {
+
+                Button botao = (Button)sender;
+
+                if (vencedor.Equals(false))
+                {
+
+                    if (botao.Text != "")
+                    {
+
+                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
+
+                    }
+
+                    else
+                    {
+
+                        if (primeira_jogada.Equals(true))
+                        {
+
+                            if (rdbtn_X.IsChecked == true)
+                            {
+
+                                jogador_atual = "X";
+
+                                botao.Text = jogador_atual.ToString();
+
+                                rdbtn_O.IsEnabled = false;
+
+                                primeira_jogada = false;
+
+                                contador++;
+
+                                btn_reset.IsEnabled = true;
+
+                            }
+
+                            else if (rdbtn_O.IsChecked == true)
+                            {
+
+                                jogador_atual = "O";
+
+                                botao.Text = jogador_atual.ToString();
+
+                                rdbtn_X.IsEnabled = false;
+
+                                primeira_jogada = false;
+
+                                contador++;
+
+                                btn_reset.IsEnabled = true;
+
+                            }
+
+                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
+                            {
+
+                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
+
+                            }
+
+                        }
+
+                        else
+                        {
+
+                            if (jogador_atual == "X")
+                            {
+
+                                jogador_atual = "O";
+
+                                botao.Text = jogador_atual.ToString();
+
+                                contador++;
+
+                            }
+
+                            else
+                            {
+
+                                jogador_atual = "X";
+
+                                botao.Text = jogador_atual.ToString();
+
+                                contador++;
+
+                            }
+
+                        }
+
+                        verificar();
+
+                    }
+
+                }
+
+                else
+                {
+
+                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
+
+                }
+
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
+
+            /*try
             {
 
                 if (vencedor == "")
@@ -146,933 +260,7 @@ namespace App_Jogo_da_Velha
 
                 await DisplayAlert("Erro", ex.Message, "OK");
 
-            }
-
-        }
-
-        private async void btn_2_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                if (vencedor == "")
-                {
-
-                    if (btn_2.Text != "")
-                    {
-
-                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
-
-                    }
-
-                    else
-                    {
-
-                        if (primeira_jogada == 0)
-                        {
-
-                            if (rdbtn_X.IsChecked == true)
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_2.Text = jogador_atual.ToString();
-
-                                rdbtn_O.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_O.IsChecked == true)
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_2.Text = jogador_atual.ToString();
-
-                                rdbtn_X.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                            {
-
-                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
-
-                            }
-
-                        }
-
-                        else
-                        {
-
-                            if (jogador_atual == "X")
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_2.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                            else
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_2.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                        }
-
-                        verificar();
-
-                    }
-
-                }
-
-                else
-                {
-
-                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Erro", ex.Message, "OK");
-
-            }
-
-        }
-
-        private async void btn_3_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                if (vencedor == "")
-                {
-
-                    if (btn_3.Text != "")
-                    {
-
-                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
-
-                    }
-
-                    else
-                    {
-
-                        if (primeira_jogada == 0)
-                        {
-
-                            if (rdbtn_X.IsChecked == true)
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_3.Text = jogador_atual.ToString();
-
-                                rdbtn_O.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_O.IsChecked == true)
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_3.Text = jogador_atual.ToString();
-
-                                rdbtn_X.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                            {
-
-                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
-
-                            }
-
-                        }
-
-                        else
-                        {
-
-                            if (jogador_atual == "X")
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_3.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                            else
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_3.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                        }
-
-                        verificar();
-
-                    }
-
-                }
-
-                else
-                {
-
-                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Erro", ex.Message, "OK");
-
-            }
-
-        }
-
-        private async void btn_4_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                if (vencedor == "")
-                {
-
-                    if (btn_4.Text != "")
-                    {
-
-                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
-
-                    }
-
-                    else
-                    {
-
-                        if (primeira_jogada == 0)
-                        {
-
-                            if (rdbtn_X.IsChecked == true)
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_4.Text = jogador_atual.ToString();
-
-                                rdbtn_O.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_O.IsChecked == true)
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_4.Text = jogador_atual.ToString();
-
-                                rdbtn_X.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                            {
-
-                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
-
-                            }
-
-                        }
-
-                        else
-                        {
-
-                            if (jogador_atual == "X")
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_4.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                            else
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_4.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                        }
-
-                        verificar();
-
-                    }
-
-                }
-
-                else
-                {
-
-                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Erro", ex.Message, "OK");
-
-            }
-
-        }
-
-        private async void btn_5_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                if (vencedor == "")
-                {
-
-                    if (btn_5.Text != "")
-                    {
-
-                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
-
-                    }
-
-                    else
-                    {
-
-                        if (primeira_jogada == 0)
-                        {
-
-                            if (rdbtn_X.IsChecked == true)
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_5.Text = jogador_atual.ToString();
-
-                                rdbtn_O.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_O.IsChecked == true)
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_5.Text = jogador_atual.ToString();
-
-                                rdbtn_X.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                            {
-
-                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
-
-                            }
-
-                        }
-
-                        else
-                        {
-
-                            if (jogador_atual == "X")
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_5.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                            else
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_5.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                        }
-
-                        verificar();
-
-                    }
-
-                }
-
-                else
-                {
-
-                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Erro", ex.Message, "OK");
-
-            }
-
-        }
-
-        private async void btn_6_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                if (vencedor == "")
-                {
-
-                    if (btn_6.Text != "")
-                    {
-                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
-                    }
-
-                    else
-                    {
-
-                        if (primeira_jogada == 0)
-                        {
-
-                            if (rdbtn_X.IsChecked == true)
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_6.Text = jogador_atual.ToString();
-
-                                rdbtn_O.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_O.IsChecked == true)
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_6.Text = jogador_atual.ToString();
-
-                                rdbtn_X.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                            {
-
-                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
-
-                            }
-
-                        }
-
-                        else
-                        {
-
-                            if (jogador_atual == "X")
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_6.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                            else
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_6.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                        }
-
-                        verificar();
-
-                    }
-
-                }
-
-                else
-                {
-
-                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Erro", ex.Message, "OK");
-
-            }
-
-        }
-
-        private async void btn_7_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                if (vencedor == "")
-                {
-
-                    if (btn_7.Text != "")
-                    {
-
-                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
-
-                    }
-
-                    else
-                    {
-
-                        if (primeira_jogada == 0)
-                        {
-
-                            if (rdbtn_X.IsChecked == true)
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_7.Text = jogador_atual.ToString();
-
-                                rdbtn_O.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_O.IsChecked == true)
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_7.Text = jogador_atual.ToString();
-
-                                rdbtn_X.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                            {
-
-                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
-
-                            }
-
-                        }
-
-                        else
-                        {
-
-                            if (jogador_atual == "X")
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_7.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                            else
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_7.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                        }
-
-                        verificar();
-
-                    }
-
-                }
-
-                else
-                {
-
-                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Erro", ex.Message, "OK");
-
-            }
-
-        }
-
-        private async void btn_8_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                if (vencedor == "")
-                {
-
-                    if (btn_8.Text != "")
-                    {
-
-                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
-
-                    }
-
-                    else
-                    {
-
-                        if (primeira_jogada == 0)
-                        {
-
-                            if (rdbtn_X.IsChecked == true)
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_8.Text = jogador_atual.ToString();
-
-                                rdbtn_O.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_O.IsChecked == true)
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_8.Text = jogador_atual.ToString();
-
-                                rdbtn_X.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                            {
-
-                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
-
-                            }
-
-                        }
-
-                        else
-                        {
-
-                            if (jogador_atual == "X")
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_8.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                            else
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_8.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                        }
-
-                        verificar();
-
-                    }
-
-                }
-
-                else
-                {
-
-                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Erro", ex.Message, "OK");
-
-            }
-
-        }
-
-        private async void btn_9_Clicked(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                if (vencedor == "")
-                {
-
-                    if (btn_9.Text != "")
-                    {
-
-                        await DisplayAlert("Aviso!", "Este campo já foi usado!", "OK");
-
-                    }
-
-                    else
-                    {
-
-                        if (primeira_jogada == 0)
-                        {
-
-                            if (rdbtn_X.IsChecked == true)
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_9.Text = jogador_atual.ToString();
-
-                                rdbtn_O.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_O.IsChecked == true)
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_9.Text = jogador_atual.ToString();
-
-                                rdbtn_X.IsEnabled = false;
-
-                                primeira_jogada++;
-
-                                contador++;
-
-                                btn_reset.IsEnabled = true;
-
-                            }
-
-                            else if (rdbtn_X.IsChecked == false && rdbtn_O.IsChecked == false)
-                            {
-
-                                await DisplayAlert("Atenção!", "Escolha uma das opções antes de jogar!", "OK");
-
-                            }
-
-                        }
-
-                        else
-                        {
-
-                            if (jogador_atual == "X")
-                            {
-
-                                jogador_atual = "O";
-
-                                btn_9.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                            else
-                            {
-
-                                jogador_atual = "X";
-
-                                btn_9.Text = jogador_atual.ToString();
-
-                                contador++;
-
-                            }
-
-                        }
-
-                        verificar();
-
-                    }
-
-                }
-
-                else
-                {
-
-                    await DisplayAlert("Atenção!", "A partida já terminou! Clique em reiniciar para começar outra partida.", "OK");
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-
-                await DisplayAlert("Erro", ex.Message, "OK");
-
-            }
+            }*/
 
         }
 
@@ -1102,11 +290,11 @@ namespace App_Jogo_da_Velha
 
                 jogador_atual = "";
 
-                primeira_jogada = 0;
+                primeira_jogada = true;
 
                 contador = 0;
 
-                vencedor = "";
+                vencedor = false;
 
                 btn_reset.IsEnabled = false;
 
@@ -1138,7 +326,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "X";
+                    vencedor = true;
 
                 }
 
@@ -1149,7 +337,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "O";
+                    vencedor = true;
 
                 }
 
@@ -1160,7 +348,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "X";
+                    vencedor = true;
 
                 }
 
@@ -1171,7 +359,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "O";
+                    vencedor = true;
 
                 }
 
@@ -1182,7 +370,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "X";
+                    vencedor = true;
 
                 }
 
@@ -1193,7 +381,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "O";
+                    vencedor = true;
 
                 }
 
@@ -1206,7 +394,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "X";
+                    vencedor = true;
 
                 }
 
@@ -1217,7 +405,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "O";
+                    vencedor = true;
 
                 }
 
@@ -1228,7 +416,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "X";
+                    vencedor = true;
 
                 }
 
@@ -1239,7 +427,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "O";
+                    vencedor = true;
 
                 }
 
@@ -1250,7 +438,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "X";
+                    vencedor = true;
 
                 }
 
@@ -1261,7 +449,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "O";
+                    vencedor = true;
 
                 }
 
@@ -1274,7 +462,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "X";
+                    vencedor = true;
 
                 }
 
@@ -1285,7 +473,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "O";
+                    vencedor = true;
 
                 }
 
@@ -1296,7 +484,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "X";
+                    vencedor = true;
 
                 }
 
@@ -1307,7 +495,7 @@ namespace App_Jogo_da_Velha
 
                     contador = 0;
 
-                    vencedor = "O";
+                    vencedor = true;
 
                 }
 
@@ -1320,7 +508,7 @@ namespace App_Jogo_da_Velha
 
                     await DisplayAlert("Fim de Jogo!", "🤝🏼 Deu Velha!", "OK");
 
-                    vencedor = "Empate";
+                    vencedor = true;
 
                 }
 
