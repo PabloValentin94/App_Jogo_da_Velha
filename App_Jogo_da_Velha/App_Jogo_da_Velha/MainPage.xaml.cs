@@ -55,7 +55,7 @@ namespace App_Jogo_da_Velha
 
                 Button botao = (Button)sender;
 
-                if (vencedor.Equals(false))
+                if (vencedor == false)
                 {
 
                     if (botao.Text != "")
@@ -68,7 +68,7 @@ namespace App_Jogo_da_Velha
                     else
                     {
 
-                        if (primeira_jogada.Equals(true))
+                        if (primeira_jogada == true)
                         {
 
                             if (rdbtn_X.IsChecked == true)
@@ -236,7 +236,7 @@ namespace App_Jogo_da_Velha
                 if (btn_1.Text == "X" && btn_2.Text == "X" && btn_3.Text == "X")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_X) || jogador_X.Equals("X"))
+                    if (String.IsNullOrEmpty(jogador_X) || jogador_X == "X")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
@@ -257,7 +257,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "O" && btn_2.Text == "O" && btn_3.Text == "O")
                 {
 
-                    if(String.IsNullOrEmpty(jogador_O) || jogador_O.Equals("O"))
+                    if(String.IsNullOrEmpty(jogador_O) || jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
@@ -278,7 +278,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_4.Text == "X" && btn_5.Text == "X" && btn_6.Text == "X")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_X) || jogador_X.Equals("X"))
+                    if (String.IsNullOrEmpty(jogador_X) || jogador_X == "X")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
@@ -299,7 +299,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_4.Text == "O" && btn_5.Text == "O" && btn_6.Text == "O")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_O) || jogador_O.Equals("O"))
+                    if (String.IsNullOrEmpty(jogador_O) || jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
@@ -320,7 +320,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_7.Text == "X" && btn_8.Text == "X" && btn_9.Text == "X")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_X) || jogador_X.Equals("X"))
+                    if (String.IsNullOrEmpty(jogador_X) || jogador_X == "X")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
@@ -341,7 +341,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_7.Text == "O" && btn_8.Text == "O" && btn_9.Text == "O")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_O) || jogador_O.Equals("O"))
+                    if (String.IsNullOrEmpty(jogador_O) || jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
@@ -364,7 +364,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "X" && btn_4.Text == "X" && btn_7.Text == "X")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_X) || jogador_X.Equals("X"))
+                    if (String.IsNullOrEmpty(jogador_X) || jogador_X == "X")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
@@ -385,7 +385,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "O" && btn_4.Text == "O" && btn_7.Text == "O")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_O) || jogador_O.Equals("O"))
+                    if (String.IsNullOrEmpty(jogador_O) || jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
@@ -406,7 +406,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_2.Text == "X" && btn_5.Text == "X" && btn_8.Text == "X")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_X) || jogador_X.Equals("X"))
+                    if (String.IsNullOrEmpty(jogador_X) || jogador_X == "X")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
@@ -427,7 +427,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_2.Text == "O" && btn_5.Text == "O" && btn_8.Text == "O")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_O) || jogador_O.Equals("O"))
+                    if (String.IsNullOrEmpty(jogador_O) || jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
@@ -448,7 +448,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_3.Text == "X" && btn_6.Text == "X" && btn_9.Text == "X")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_X) || jogador_X.Equals("X"))
+                    if (String.IsNullOrEmpty(jogador_X) || jogador_X == "X")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
@@ -469,7 +469,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_3.Text == "O" && btn_6.Text == "O" && btn_9.Text == "O")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_O) || jogador_O.Equals("O"))
+                    if (String.IsNullOrEmpty(jogador_O) || jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
@@ -492,7 +492,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "X" && btn_5.Text == "X" && btn_9.Text == "X")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_X) || jogador_X.Equals("X"))
+                    if (String.IsNullOrEmpty(jogador_X) || jogador_X == "X")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
@@ -513,7 +513,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_1.Text == "O" && btn_5.Text == "O" && btn_9.Text == "O")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_O) || jogador_O.Equals("O"))
+                    if (String.IsNullOrEmpty(jogador_O) || jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
@@ -534,7 +534,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_3.Text == "X" && btn_5.Text == "X" && btn_7.Text == "X")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_X) || jogador_X.Equals("X"))
+                    if (String.IsNullOrEmpty(jogador_X) || jogador_X == "X")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: X.", "OK");
@@ -555,7 +555,7 @@ namespace App_Jogo_da_Velha
                 else if (btn_3.Text == "O" && btn_5.Text == "O" && btn_7.Text == "O")
                 {
 
-                    if (String.IsNullOrEmpty(jogador_O) || jogador_O.Equals("O"))
+                    if (String.IsNullOrEmpty(jogador_O) || jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🏆 Vencedor: O.", "OK");
@@ -581,7 +581,7 @@ namespace App_Jogo_da_Velha
                 {
 
                     if (String.IsNullOrEmpty(jogador_X) && String.IsNullOrEmpty(jogador_O) ||
-                        jogador_X.Equals("X") && jogador_O.Equals("O"))
+                        jogador_X == "X" && jogador_O == "O")
                     {
 
                         await DisplayAlert("Fim de Jogo!", "🤝🏼 Empate: Deu Velha!", "OK");
@@ -617,53 +617,76 @@ namespace App_Jogo_da_Velha
             try
             {
 
-                if (await DisplayAlert("Atenção!", "Deseja inserir o nome dos jogadores?", "Sim", "Não"))
+                if (await DisplayAlert("Atenção!", "Deseja inserir os nomes dos jogadores?", "Sim", "Não"))
                 {
 
-                    if(await DisplayAlert("Aviso!", "Tem certeza? Após esse ponto não haverá como voltar.", "Sim", "Não"))
+                    bool escolha = true;
+
+                    while (escolha == true)
                     {
 
-                        while (true)
+                        jogador_X = await DisplayPromptAsync("1º Jogador:", "Informe o nome do jogador que será o X:", "Confirmar",
+                                                             "Cancelar", placeholder: "Insira o nome aqui", maxLength: 15);
+
+                        if (String.IsNullOrEmpty(jogador_X))
                         {
 
-                            jogador_X = await DisplayPromptAsync("Atenção!", "Informe o nome do jogador que será o X:", "OK",
-                                                                 cancel: null, placeholder: "Insira o nome aqui", maxLength: 15);
-
-                            if (String.IsNullOrEmpty(jogador_X))
+                            if (await DisplayAlert("Atenção!", "Campo não preenchido! Realmente deseja deixá-lo em branco?", "Sim", "Não"))
                             {
 
-                                await DisplayAlert("Atenção!", "Campo não preenchido! Preencha antes de proseguir.", "OK");
+                                break;
 
                             }
 
                             else
                             {
 
-                                break;
+                                escolha = true;
 
                             }
 
                         }
 
-                        while (true)
+                        else
                         {
 
-                            jogador_O = await DisplayPromptAsync("Atenção!", "Informe o nome do jogador que será o O:", "OK",
-                                                                 cancel: null, placeholder: "Insira o nome aqui", maxLength: 15);
+                            break;
 
-                            if (String.IsNullOrEmpty(jogador_O))
+                        }
+
+                    }
+
+                    escolha = true;
+
+                    while (escolha == true)
+                    {
+
+                        jogador_O = await DisplayPromptAsync("2º Jogador:", "Informe o nome do jogador que será o O:", "Confirmar",
+                                                             "Cancelar", placeholder: "Insira o nome aqui", maxLength: 15);
+
+                        if (String.IsNullOrEmpty(jogador_O))
+                        {
+
+                            if (await DisplayAlert("Atenção!", "Campo não preenchido! Realmente deseja deixá-lo em branco?", "Sim", "Não"))
                             {
 
-                                await DisplayAlert("Atenção!", "Campo não preenchido! Preencha antes de proseguir.", "OK");
+                                break;
 
                             }
 
                             else
                             {
 
-                                break;
+                                escolha = true;
 
                             }
+
+                        }
+
+                        else
+                        {
+
+                            break;
 
                         }
 
