@@ -634,6 +634,8 @@ namespace App_Jogo_da_Velha
                             if (await DisplayAlert("Atenção!", "Campo não preenchido! Realmente deseja deixá-lo em branco?", "Sim", "Não"))
                             {
 
+                                jogador_X = "X";
+
                                 break;
 
                             }
@@ -669,6 +671,8 @@ namespace App_Jogo_da_Velha
 
                             if (await DisplayAlert("Atenção!", "Campo não preenchido! Realmente deseja deixá-lo em branco?", "Sim", "Não"))
                             {
+
+                                jogador_O = "O";
 
                                 break;
 
